@@ -1,0 +1,12 @@
+---
+# same as application.properties
+
+server:
+  port: 8082
+  context-path: /app
+nickName: ssgghh
+whoami: By - ${nickName}
+author:
+  name: ${nickName}
+  sex: male
+  age: 35
