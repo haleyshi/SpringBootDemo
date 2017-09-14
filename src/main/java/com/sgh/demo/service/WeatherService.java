@@ -1,12 +1,12 @@
 /**
  * 
  */
-package com.example.demo.service;
+package com.sgh.demo.service;
 
 /**
  * @author eguoshi
  *
  */
 public interface WeatherService {
-	String forcast();
+	String forecast();
 }

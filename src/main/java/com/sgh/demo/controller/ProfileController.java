@@ -1,14 +1,14 @@
 /**
  * 
  */
-package com.example.demo.controller;
+package com.sgh.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.service.WeatherService;
+import com.sgh.demo.service.WeatherService;
 
 /**
  * @author eguoshi
@@ -21,6 +21,6 @@ public class ProfileController {
 	
 	@RequestMapping(value = "/weather", method = RequestMethod.GET)
 	public String forcast() {
-		return weatherService.forcast();
+		return weatherService.forecast();
 	}
 }

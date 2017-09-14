@@ -7,6 +7,8 @@
 	<artifactId>SpringBootDemo</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
+	<!-- war for deploy on external containers -->
+	<!-- <packaging>war</packaging> -->
 
 	<name>SpringBootDemo</name>
 	<description>Demo project for Spring Boot</description>
@@ -37,19 +39,16 @@
 		</dependency>
 
 		<!-- Jetty but not tomcat -->
+		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-web</artifactId> 
+			<exclusions> <exclusion> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-tomcat</artifactId> 
+			</exclusion> </exclusions> </dependency> <dependency> <groupId>org.springframework.boot</groupId> 
+			<artifactId>spring-boot-starter-jetty</artifactId> </dependency> -->
+
+		<!-- Use the external tomcat, not packaging tomcat -->
 		<!-- <dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-tomcat</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jetty</artifactId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
 		</dependency> -->
 
 		<dependency>
@@ -72,6 +71,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
